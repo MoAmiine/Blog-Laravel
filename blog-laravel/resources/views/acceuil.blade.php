@@ -45,7 +45,7 @@
                     </div>
                 </article>
 
-                <article class="bg-white border border-gray-100 p-8 rounded-[2rem] shadow-sm">
+                <article  class="bg-white border border-gray-100 p-8 rounded-[2rem] shadow-sm">
                     <div class="flex items-center gap-4 mb-4">
                         <span class="bg-emerald-50 text-emerald-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase">Design</span>
                         <span class="text-gray-400 text-sm">Hier</span>
