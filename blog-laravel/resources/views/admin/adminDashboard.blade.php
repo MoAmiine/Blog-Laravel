@@ -20,7 +20,7 @@
                 <a href="#" class="flex items-center gap-3 p-3 bg-indigo-50 text-indigo-700 rounded-xl font-bold">
                     <span>📑 Articles</span>
                 </a>
-                <a href="#" class="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-50 rounded-xl transition">
+                <a href="{{ route('categories.index') }}" class="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-50 rounded-xl transition">
                     <span>📁 Catégories</span>
                 </a>
                 <a href="#" class="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-50 rounded-xl transition">

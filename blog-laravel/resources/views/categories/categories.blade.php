@@ -17,7 +17,7 @@
                 <h1 class="text-3xl font-extrabold tracking-tight">Gestion des Catégories</h1>
                 <p class="text-slate-500 font-medium">Organisez vos articles par thématiques.</p>
             </div>
-            <a href="#" class="text-sm font-bold text-indigo-600 hover:text-indigo-800">Retour au Dashboard →</a>
+            <a href="{{ route('admin.index') }}" class="text-sm font-bold text-indigo-600 hover:text-indigo-800">Retour au Dashboard →</a>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -33,3 +33,53 @@
                         </div>
                         <button type="submit" class="w-full bg-black text-white font-bold py-4 rounded-xl hover:bg-slate-800 transition active:scale-95">
                             Créer la catégorie
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="bg-slate-50/50 border-b border-slate-100">
+                                <th class="p-6 text-xs font-black uppercase tracking-widest text-slate-400">Nom</th>
+                                <th class="p-6 text-xs font-black uppercase tracking-widest text-slate-400 text-center">Nombre de Posts</th>
+                                <th class="p-6 text-xs font-black uppercase tracking-widest text-slate-400 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-50">
+                            <tr class="hover:bg-slate-50/30 transition">
+                                <td class="p-6">
+                                    <span class="font-bold text-slate-700">Développement Web</span>
+                                </td>
+                                <td class="p-6 text-center">
+                                    <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-sm font-bold">14</span>
+                                </td>
+                                <td class="p-6 text-right space-x-4">
+                                    <button class="text-sm font-bold text-indigo-600 hover:underline">Modifier</button>
+                                    <button class="text-sm font-bold text-red-400 hover:text-red-600 transition">Supprimer</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/30 transition">
+                                <td class="p-6">
+                                    <span class="font-bold text-slate-700">Design UI/UX</span>
+                                </td>
+                                <td class="p-6 text-center">
+                                    <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-sm font-bold">8</span>
+                                </td>
+                                <td class="p-6 text-right space-x-4">
+                                    <button class="text-sm font-bold text-indigo-600 hover:underline">Modifier</button>
+                                    <button class="text-sm font-bold text-red-400 hover:text-red-600 transition">Supprimer</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
