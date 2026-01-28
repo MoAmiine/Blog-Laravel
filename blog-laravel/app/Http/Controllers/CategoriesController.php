@@ -2,19 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categorie;
 use Illuminate\Http\Request;
-use App\Models\Post;
-use Illuminate\Support\Facades\Log;
 
-class PostController extends Controller
+class CategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('adminDashbord');
+        return view('categories.categories');
     }
 
     /**
@@ -22,27 +19,16 @@ class PostController extends Controller
      */
     public function create()
     {
-        // $categories = Categorie::all();
-        return view('posts.create');
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
-public function store(Request $request)
-{
-    $validated = $request->validate([
-        'title' => 'required',
-        'content' => 'required',
-        'tags' => 'nullable'
-    ]);
-
-    // Debugging line
-    Log::info('Validated Data: ', $validated);
-
-    Post::create($validated);
-    return redirect()->route('posts.index');
-}
+    public function store(Request $request)
+    {
+        //
+    }
 
     /**
      * Display the specified resource.
@@ -76,4 +62,3 @@ public function store(Request $request)
         //
     }
 }
-
