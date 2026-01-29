@@ -35,11 +35,12 @@
                         <div class="space-y-3">
                             <label class="text-sm font-bold text-slate-700 ml-1">Catégorie</label>
                             <div class="relative">
-                                <select name="category_id" class="w-full bg-slate-50 border border-slate-100 rounded-2xl p-4 appearance-none focus:ring-4 focus:ring-indigo-500/10 focus:bg-white focus:border-indigo-500 outline-none transition-all">
+                                <select name="categories_id" class="w-full bg-slate-50 border border-slate-100 rounded-2xl p-4 appearance-none focus:ring-4 focus:ring-indigo-500/10 focus:bg-white focus:border-indigo-500 outline-none transition-all">
                                     <option value="" disabled selected>Choisir une thématique</option>
-                                    <option value="1">Développement Web</option>
-                                    <option value="2">Intelligence Artificielle</option>
-                                    <option value="3">Design UI/UX</option>
+                                    @foreach ($categories as $categorie)
+                                    <option value={{ $categorie->id }}>{{ $categorie->nom }}</option>
+                                    
+                                    @endforeach
                                 </select>
                                 <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-slate-400">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>

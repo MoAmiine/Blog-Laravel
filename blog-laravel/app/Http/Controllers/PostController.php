@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('adminDashbord');
+        return view('admin.adminDashboard');
     }
 
     /**
@@ -22,8 +22,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        // $categories = Categorie::all();
-        return view('posts.create');
+        $categories = Categorie::all();
+        return view('posts.create', compact('categories'));
     }
 
     /**
@@ -34,19 +34,15 @@ public function store(Request $request)
     $validated = $request->validate([
         'title' => 'required',
         'content' => 'required',
-        'tags' => 'nullable'
-    ]);
-
-    // Debugging line
-    Log::info('Validated Data: ', $validated);
-
+        'tags' => 'nullable',
+        'categories_id' =>'required'
+        ]);
+        
     Post::create($validated);
     return redirect()->route('posts.index');
 }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(string $id)
     {
         //
