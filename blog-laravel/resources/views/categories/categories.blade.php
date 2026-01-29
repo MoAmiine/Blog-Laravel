@@ -51,8 +51,8 @@
                         </thead>
                         
                         <tbody class="divide-y divide-slate-50">
+                            @foreach ($categories as $categorie)
                             <tr class="hover:bg-slate-50/30 transition">
-                                @foreach ($categories as $categorie)
                                 <td class="p-6">
                                     <span class="font-bold text-slate-700">{{ $categorie->nom }}</span>
                                 </td>
@@ -63,8 +63,8 @@
                                     <button class="text-sm font-bold text-indigo-600 hover:underline">Modifier</button>
                                     <button class="text-sm font-bold text-red-400 hover:text-red-600 transition">Supprimer</button>
                                 </td>
-                                @endforeach
                             </tr>
+                            @endforeach
                             <tr class="hover:bg-slate-50/30 transition">
                                 <td class="p-6">
                                     <span class="font-bold text-slate-700">Design UI/UX</span>
