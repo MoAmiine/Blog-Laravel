@@ -25,10 +25,11 @@
             <div class="lg:col-span-1">
                 <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
                     <h2 class="text-xl font-bold mb-6">Ajouter une catégorie</h2>
-                    <form action="#" method="POST" class="space-y-4">
+                    <form action="{{ route('categories.store') }}" method="POST" class="space-y-4">
+                        @Csrf
                         <div>
                             <label class="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Nom de la catégorie</label>
-                            <input type="text" name="name" placeholder="Ex: Intelligence Artificielle" 
+                            <input type="text" name="nom" placeholder="Ex: Intelligence Artificielle" 
                                    class="w-full mt-2 bg-slate-50 border border-slate-100 rounded-xl p-4 focus:ring-4 focus:ring-indigo-500/10 focus:bg-white focus:border-indigo-500 outline-none transition-all">
                         </div>
                         <button type="submit" class="w-full bg-black text-white font-bold py-4 rounded-xl hover:bg-slate-800 transition active:scale-95">
@@ -48,10 +49,12 @@
                                 <th class="p-6 text-xs font-black uppercase tracking-widest text-slate-400 text-right">Actions</th>
                             </tr>
                         </thead>
+                        
                         <tbody class="divide-y divide-slate-50">
                             <tr class="hover:bg-slate-50/30 transition">
+                                @foreach ($categories as $categorie)
                                 <td class="p-6">
-                                    <span class="font-bold text-slate-700">Développement Web</span>
+                                    <span class="font-bold text-slate-700">{{ $categorie->nom }}</span>
                                 </td>
                                 <td class="p-6 text-center">
                                     <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-sm font-bold">14</span>
@@ -60,6 +63,7 @@
                                     <button class="text-sm font-bold text-indigo-600 hover:underline">Modifier</button>
                                     <button class="text-sm font-bold text-red-400 hover:text-red-600 transition">Supprimer</button>
                                 </td>
+                                @endforeach
                             </tr>
                             <tr class="hover:bg-slate-50/30 transition">
                                 <td class="p-6">
