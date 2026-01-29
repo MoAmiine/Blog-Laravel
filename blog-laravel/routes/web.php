@@ -2,13 +2,12 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\Routing\Loader\Configurator\Routes;
 
-Route::get('/', function () {
-    return view('acceuil');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/admin/dashboard', function(){
     return view('adminDashboard');
