@@ -39,7 +39,7 @@ public function store(Request $request)
         ]);
         
     Post::create($validated);
-    return redirect()->route('posts.index');
+    return redirect()->route('admin.index');
 }
 
 
@@ -61,9 +61,15 @@ public function store(Request $request)
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id, Post $post)
+    public function update(Request $request, Post $post)
     {
-        $post->update();
+        $validated = $request->validate([
+        'title' => 'required',
+        'content' => 'required',
+        'tags' => 'nullable',
+        'categories_id' =>'required'
+        ]);
+        $post->update($validated);
         return redirect()->route('admin.index');
     }
 

@@ -33,13 +33,13 @@
                     </div>
 
                     <div class="space-y-3">
-                        <label class="text-sm font-bold text-slate-700 ml-1"></label>
-                        <select name="categorie_id" class="w-full bg-slate-50 border border-slate-100 rounded-2xl p-4 appearance-none focus:ring-4 focus:ring-indigo-500/10 focus:bg-white focus:border-indigo-500 outline-none transition-all">
+                        <label class="text-sm font-bold text-slate-700 ml-1">Catégorie</label>
+                        <select name="categories_id" class="w-full bg-slate-50 border border-slate-100 rounded-2xl p-4 appearance-none focus:ring-4 focus:ring-indigo-500/10 focus:bg-white focus:border-indigo-500 outline-none transition-all">
                             @foreach ($categories as $cat)
-{{--                             
-                            <option value="{{ $cat->id }}" {{ $post->categories_id == $cat->id ? 'selected' : '' }}>
+                           
+                            <option value="{{ $cat->id }}">
                                 {{ $cat->nom }}
-                            </option> --}}
+                            </option> 
                             @endforeach        
                         </select>
                     </div>
@@ -47,7 +47,7 @@
                     <div class="space-y-3">
                         <label class="text-sm font-bold text-slate-700 ml-1">Contenu</label>
                         <textarea name="content" rows="10" 
-                                  class="w-full bg-slate-50 border border-slate-100 rounded-2xl p-5 focus:ring-4 focus:ring-indigo-500/10 focus:bg-white focus:border-indigo-500 outline-none transition-all resize-none"></textarea>
+                                  class="w-full bg-slate-50 border border-slate-100 rounded-2xl p-5 focus:ring-4 focus:ring-indigo-500/10 focus:bg-white focus:border-indigo-500 outline-none transition-all resize-none">{{ $post->content }}</textarea>
                     </div>
 
                     <div class="flex items-center gap-4 pt-4">

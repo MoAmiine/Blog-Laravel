@@ -13,9 +13,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $post = Post::with('categorie')->get();
-        // $categorie = Categorie::find($post->categories_id);
-        return view('admin.adminDashboard', compact('post'));
+        $posts = Post::with('categorie')->get();
+        return view('admin.adminDashboard', compact('posts'));
     }
 
     /**

@@ -13,7 +13,7 @@
     <div class="flex min-h-screen">
         <aside class="w-64 bg-white border-r border-slate-200 hidden md:flex flex-col p-6">
             <div class="flex items-center gap-3 mb-10 px-2">
-                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold">D</div>
+                <a href=""><div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold">D</div></a>
                 <span class="font-bold text-xl tracking-tight">NexusAdmin</span>
             </div>
             <nav class="space-y-2">
@@ -53,7 +53,7 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-100">
-                        @foreach ($post as $p)
+                        @foreach ($posts as $p)
                         
                         <tr class="hover:bg-slate-50/50 transition">
                             
@@ -65,7 +65,7 @@
                             </td>
                             <td class="p-6 text-slate-500 text-sm">{{ $p->created_at}}</td>
                             <td class="p-6 text-right space-x-3">
-                                <button class="text-slate-400 hover:text-indigo-600 transition">Modifier</button>
+                                <a href="{{ route('posts.edit', $p) }}"><button class="text-slate-400 hover:text-indigo-600 transition">Modifier</button></a>
                                 <button class="text-slate-400 hover:text-red-500 transition">Supprimer</button>
                             </td>
                             @endforeach

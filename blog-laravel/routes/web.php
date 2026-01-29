@@ -9,9 +9,9 @@ use Symfony\Component\Routing\Loader\Configurator\Routes;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/admin/dashboard', function(){
-    return view('adminDashboard');
-});
+// Route::get('/admin/dashboard', function(){
+//     return view('adminDashboard');
+// });
 
 Route::get('/posts/create', function(){
     return view('createPost');
