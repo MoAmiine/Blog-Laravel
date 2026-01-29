@@ -18,7 +18,7 @@
             </div>
             <div class="flex gap-6 items-center font-semibold text-gray-600">
                 <a href="#" class="hover:text-black">Accueil</a>
-                <a href="admin/dashboard" class="bg-black text-white px-5 py-2.5 rounded-full text-sm hover:bg-gray-800 transition">Dashboard Admin</a>
+                <a href="{{ route('admin.index') }}" class="bg-black text-white px-5 py-2.5 rounded-full text-sm hover:bg-gray-800 transition">Dashboard Admin</a>
             </div>
         </div>
     </nav>

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorie;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -11,7 +13,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.adminDashboard');
+        $post = Post::with('categorie')->get();
+        // $categorie = Categorie::find($post->categories_id);
+        return view('admin.adminDashboard', compact('post'));
     }
 
     /**

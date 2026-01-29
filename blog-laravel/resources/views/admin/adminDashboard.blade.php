@@ -53,21 +53,29 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-100">
+                        @foreach ($post as $p)
+                        
                         <tr class="hover:bg-slate-50/50 transition">
-                            <td class="p-6 font-semibold text-slate-800">Introduction à Laravel MVC</td>
+                            
+                            <td class="p-6 font-semibold text-slate-800">{{ $p->title }}</td>
                             <td class="p-6">
-                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase">Tech</span>
+                               
+                                <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase">{{$p->categorie->nom}}</span>
+
                             </td>
-                            <td class="p-6 text-slate-500 text-sm">28 Jan 2026</td>
+                            <td class="p-6 text-slate-500 text-sm">{{ $p->created_at}}</td>
                             <td class="p-6 text-right space-x-3">
                                 <button class="text-slate-400 hover:text-indigo-600 transition">Modifier</button>
                                 <button class="text-slate-400 hover:text-red-500 transition">Supprimer</button>
                             </td>
+                            @endforeach
                         </tr>
-                        <tr class="hover:bg-slate-50/50 transition">
-                            <td class="p-6 font-semibold text-slate-800">Les avantages de Tailwind</td>
-                            <td class="p-6">
-                                <span class="bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full text-xs font-bold uppercase">Design</span>
-                            </td>
-                            <td class="p-6 text-slate-500 text-sm">27 Jan 2026</td>
-                            <td
+
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
