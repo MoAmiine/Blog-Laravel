@@ -28,23 +28,25 @@
             
             <div class="lg:w-2/3 space-y-8">
                 <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Articles à la une</h2>
-
+                @foreach ($posts as $post)
+                
                 <article class="bg-white border border-gray-100 p-8 rounded-[2rem] shadow-sm hover:shadow-xl hover:scale-[1.01] transition-all">
                     <div class="flex items-center gap-4 mb-4">
-                        <span class="bg-indigo-50 text-indigo-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase">Technologie</span>
-                        <span class="text-gray-400 text-sm">Il y a 2 heures</span>
+                        <span class="bg-indigo-50 text-indigo-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase">{{ $post->categorie->nom }}</span>
+                        <span class="text-gray-400 text-sm">{{ $post->created_at }}</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Pourquoi Laravel est le futur du développement PHP</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">Découvrez comment ce framework révolutionne la manière de concevoir des applications web modernes et robustes...</p>
+                    <h3 class="text-2xl font-bold mb-4">{{$post->title}}</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">{{ $post->content }}</p>
                     <div class="flex items-center justify-between">
                         <a href="#" class="font-bold text-black border-b-2 border-black pb-1">Lire l'article</a>
                         <div class="flex gap-2">
-                            <span class="text-xs bg-gray-100 px-3 py-1 rounded-md text-gray-500">#WebDev</span>
-                            <span class="text-xs bg-gray-100 px-3 py-1 rounded-md text-gray-500">#Laravel</span>
+                            <span class="text-xs bg-gray-100 px-3 py-1 rounded-md text-gray-500"></span>
+                            <span class="text-xs bg-gray-100 px-3 py-1 rounded-md text-gray-500"></span>
                         </div>
                     </div>
                 </article>
-
+                @endforeach
+                
                 <article  class="bg-white border border-gray-100 p-8 rounded-[2rem] shadow-sm">
                     <div class="flex items-center gap-4 mb-4">
                         <span class="bg-emerald-50 text-emerald-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase">Design</span>
@@ -60,18 +62,14 @@
                 <div class="bg-white border border-gray-100 p-8 rounded-[2rem] sticky top-32">
                     <h4 class="text-lg font-bold mb-6">Catégories</h4>
                     <div class="flex flex-col gap-3">
+                        @foreach ($categories as $categorie)
+                        
                         <a href="#" class="flex justify-between items-center p-3 hover:bg-gray-50 rounded-xl transition font-medium">
-                            <span>🚀 Technologie</span>
-                            <span class="text-gray-400 text-sm">12</span>
+                            <span>{{ $categorie->nom }}</span>
+                            <span class="text-gray-400 text-sm"></span>
                         </a>
-                        <a href="#" class="flex justify-between items-center p-3 hover:bg-gray-50 rounded-xl transition font-medium">
-                            <span>🎨 Design</span>
-                            <span class="text-gray-400 text-sm">8</span>
-                        </a>
-                        <a href="#" class="flex justify-between items-center p-3 hover:bg-gray-50 rounded-xl transition font-medium">
-                            <span>💡 Tutoriels</span>
-                            <span class="text-gray-400 text-sm">24</span>
-                        </a>
+                        @endforeach
+
                     </div>
                 </div>
             </aside>
