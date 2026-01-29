@@ -51,17 +51,20 @@ public function store(Request $request)
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Post $post)
     {
-        //
+        $categories = Categorie::all();
+        return view('posts.edit', compact('post', 'categories'));
     }
+    
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id, Post $post)
     {
-        //
+        $post->update();
+        return redirect()->route('admin.index');
     }
 
     /**
