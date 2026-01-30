@@ -48,17 +48,21 @@ class CategoriesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Categorie $categorie)
     {
-        //
+        return view('categories.edit', compact('categorie'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Categorie $categorie)
     {
-        //
+        $validated = $request->validate([
+            'nom' => 'required'
+        ]);
+        $categorie->update($validated);
+        return redirect()->route('categories.index');
     }
 
     /**

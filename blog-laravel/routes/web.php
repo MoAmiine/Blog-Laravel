@@ -19,5 +19,5 @@ Route::get('/posts/create', function(){
 
 Route::resource('posts', PostController::class);
 
-Route::resource('categories', CategoriesController::class);
+Route::resource('categories', CategoriesController::class)->parameters(['categories' => 'categorie']);
 Route::resource('admin', AdminController::class);
