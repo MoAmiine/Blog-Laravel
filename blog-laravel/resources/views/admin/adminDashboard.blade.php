@@ -66,7 +66,7 @@
                             <td class="p-6 text-slate-500 text-sm">{{ $p->created_at}}</td>
                             <td class="p-6 text-right space-x-3">
                                 <a href="{{ route('posts.edit', $p) }}"><button class="text-slate-400 hover:text-indigo-600 transition">Modifier</button></a>
-                                <button class="text-slate-400 hover:text-red-500 transition">Supprimer</button>
+                                <a href="{{ route('posts.destroy', $p) }}"><button class="text-slate-400 hover:text-red-500 transition">Supprimer</button></a>
                             </td>
                             @endforeach
                         </tr>
