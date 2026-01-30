@@ -20,7 +20,7 @@
     <div class="flex min-h-screen">
         <aside class="w-64 bg-white border-r border-slate-200 hidden md:flex flex-col p-6">
             <div class="flex items-center gap-3 mb-10 px-2">
-                <a href="">
+                <a href="{{ route('home') }}">
                     <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold">
                         D</div>
                 </a>
