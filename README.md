@@ -3,4 +3,4 @@
 
 28 / 01 / 2026 : ajourd'hui j'ai complete la creation des categories et les afficher a la page des categories , aussi j'ai essayer d'ajouter un produit mais j'ai trouver des erreurs au niveau de validation 
 
-29 / 01 / 2026 : ajourd'hui j'ai complete la creation des produits j'ai fixe les erreur (sans ai) ensuite j'ai affiche tous les produits avec leurs categories et leurs dates de creation dans tableau de board d'admin .
+29 / 01 / 2026 : ajourd'hui j'ai complete la creation des produits j'ai fixe les erreur (sans ai) ensuite j'ai affiche tous les produits avec leurs categories et leurs dates de creation dans tableau de board d'admin , aussi j'ai realise les methodes edit et update et destroy pour les produit mais j'ai une errer au niveau de destroy.
