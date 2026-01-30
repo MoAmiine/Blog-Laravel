@@ -66,7 +66,11 @@
                             <td class="p-6 text-slate-500 text-sm">{{ $p->created_at}}</td>
                             <td class="p-6 text-right space-x-3">
                                 <a href="{{ route('posts.edit', $p) }}"><button class="text-slate-400 hover:text-indigo-600 transition">Modifier</button></a>
-                                <a href="{{ route('posts.destroy', $p) }}"><button class="text-slate-400 hover:text-red-500 transition">Supprimer</button></a>
+                                <form method="POST" action="{{ route('posts.destroy', $p) }}" style="display:inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="text-slate-400 hover:text-red-500 transition" onclick="return confirm('Êtes-vous sûr?')">Supprimer</button>
+                                </form>
                             </td>
                             @endforeach
                         </tr>

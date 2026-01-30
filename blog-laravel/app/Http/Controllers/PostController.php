@@ -76,11 +76,10 @@ public function store(Request $request)
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Post $posts)
+    public function destroy(Post $post)
     {
-        dd('test');
-        $posts->delete();
-        return redirect()->route('admin.index', compact('posts'));
+        $post->delete();
+        return redirect()->route('admin.index');
     }
 }
 
