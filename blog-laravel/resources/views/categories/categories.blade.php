@@ -64,23 +64,11 @@
                                     <form method="POST" action="{{ route('categories.destroy', $categorie) }}" style="display:inline;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="text-slate-400 hover:text-red-500 transition"
+                                        <button type="submit" class="text-sm font-bold text-red-400 hover:text-red-600 transition"
                                             onclick="return confirm('Supprimer la categorie ?')">Supprimer</button>
                                     </form>                                </td>
                             </tr>
                             @endforeach
-                            <tr class="hover:bg-slate-50/30 transition">
-                                <td class="p-6">
-                                    <span class="font-bold text-slate-700">Design UI/UX</span>
-                                </td>
-                                <td class="p-6 text-center">
-                                    <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-sm font-bold">8</span>
-                                </td>
-                                <td class="p-6 text-right space-x-4">
-                                    <button class="text-sm font-bold text-indigo-600 hover:underline">Modifier</button>
-                                    <button class="text-sm font-bold text-red-400 hover:text-red-600 transition">Supprimer</button>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
