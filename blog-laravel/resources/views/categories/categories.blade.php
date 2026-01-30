@@ -57,7 +57,7 @@
                                     <span class="font-bold text-slate-700">{{ $categorie->nom}}</span>
                                 </td>
                                 <td class="p-6 text-center">
-                                    <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-sm font-bold">14</span>
+                                    <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-sm font-bold">{{ $categorie->posts->count() }}</span>
                                 </td>
                                 <td class="p-6 text-right space-x-4">
                                     <a href="{{ route('categories.edit', $categorie)}}"><button class="text-sm font-bold text-indigo-600 hover:underline">Modifier</button></a>

@@ -13,7 +13,8 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $categories = Categorie::all();
+        
+        $categories = Categorie::with('posts')->get();
         return view('categories.categories', compact('categories'));
     }
 
