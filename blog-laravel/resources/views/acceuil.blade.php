@@ -47,15 +47,7 @@
                 </article>
                 @endforeach
                 
-                <article  class="bg-white border border-gray-100 p-8 rounded-[2rem] shadow-sm">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="bg-emerald-50 text-emerald-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase">Design</span>
-                        <span class="text-gray-400 text-sm">Hier</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Maîtriser Tailwind CSS en 10 minutes</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">Le guide ultime pour styliser vos composants sans jamais quitter votre fichier HTML.</p>
-                    <a href="#" class="font-bold text-black border-b-2 border-black pb-1">Lire l'article</a>
-                </article>
+
             </div>
 
             <aside class="lg:w-1/3">
