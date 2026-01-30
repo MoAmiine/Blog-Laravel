@@ -61,8 +61,12 @@
                                 </td>
                                 <td class="p-6 text-right space-x-4">
                                     <a href="{{ route('categories.edit', $categorie)}}"><button class="text-sm font-bold text-indigo-600 hover:underline">Modifier</button></a>
-                                    <button class="text-sm font-bold text-red-400 hover:text-red-600 transition">Supprimer</button>
-                                </td>
+                                    <form method="POST" action="{{ route('categories.destroy', $categorie) }}" style="display:inline;">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="text-slate-400 hover:text-red-500 transition"
+                                            onclick="return confirm('Supprimer la categorie ?')">Supprimer</button>
+                                    </form>                                </td>
                             </tr>
                             @endforeach
                             <tr class="hover:bg-slate-50/30 transition">
